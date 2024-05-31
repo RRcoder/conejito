@@ -1,0 +1,12 @@
+version: "2" 
+services:
+  rabbit_server1:
+    image: rabbitmq:3.13-alpine
+    container_name: rabbit_server1
+    environment:
+      - RABBITMQ_DEFAULT_USER=root
+      - RABBITMQ_DEFAULT_PASS=flash
+      - TZ=America/Argentina/Buenos_Aires
+    ports:
+      - 8080:8080
+      - 5672:5672
